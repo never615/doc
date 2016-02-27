@@ -1,4 +1,4 @@
-# MallTo Doc1
+# MallTo Doc
 [Home](http://www.never615.com/mallto)
 [MT_LBS](mt_lbs.md)
 [MT_MAP](mt_map.md)
