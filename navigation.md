@@ -12,7 +12,7 @@
 
 
 
-[About](index.md)
+
 [gimmick:themechooser](Theme)
 [gimmick:theme](readable)
 
