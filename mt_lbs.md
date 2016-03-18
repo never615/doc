@@ -19,6 +19,8 @@
 
 ## 总体设计
 ---
+![定位模块](https://raw.githubusercontent.com/never615/respository/master/%E5%A2%A8%E5%85%94%E4%BD%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1.png)
+
 **设计目标：可以支持扩展多个商城。** 
 
 ### 云端数据管理
