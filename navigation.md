@@ -1,6 +1,11 @@
 # MallTo Doc
-[Home](http://www.never615.com/mallto)
-[MT_LBS](mt_lbs.md)
+[Home](http://www.never615.com)
+[MT_LBS]()
+
+ * [设计](mt_lbs.md)
+ * [梳理思路之判断当前在哪](梳理思路之判断当前在哪.md)
+
+
 [MT_MAP](mt_map.md)
 [MT_NAVIGATE](mt_navigate.md)
 
