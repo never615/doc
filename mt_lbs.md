@@ -126,19 +126,19 @@ floorId | Integer   | NOT NULL  | 楼层id
 blockId | Integer   | NOT NULL  | 商城分区id
 mallId  | Integer   | NOT NULL  | 商城id
 
-#### 6. gps坐标和墨兔坐标映射表(CoordinateMapping)
+#### 6. gps坐标和墨兔坐标映射表(MappingCoordinate)
 
 字段	| 类型			| 约束			| 说明
 ---|---|---|---
 id		| Integer	| PK			| 自动增长
-gpsLat| Real		| NOTNULL	| gps(wgs84)纬度坐标
-gpsLng| Real		| NOTNULL	| gps经度坐标
-bdLat|Real		| NOTNULL	| 百度(bd09ll)坐标纬度
-bdLng|Real		| NOTNULL	| 百度(bd09ll)坐标经度
-mtLat|Real		| NOTNULL	| 墨兔坐标纬度
-mtLng|Real		| NOTNULL	| 墨兔坐标经度
-bloorId|Integer| NOTNULL	| 墨兔自定义区域id
-mallId|Integer	| NOTNULL	| 商城id
+gpsLat| Real		| NOT NULL	| gps(wgs84)纬度坐标
+gpsLng| Real		| NOT NULL	| gps经度坐标
+bdLat|Real		| NOT NULL	| 百度(bd09ll)坐标纬度
+bdLng|Real		| NOT NULL	| 百度(bd09ll)坐标经度
+mtLat|Real		| NOT NULL	| 墨兔坐标纬度
+mtLng|Real		| NOT NULL	| 墨兔坐标经度
+bloorId|Integer| NOT NULL	| 墨兔自定义区域id
+mallId|Integer	| NOT NULL	| 商城id
 
 ### 接口设计
 #### 定位api
