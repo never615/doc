@@ -138,6 +138,8 @@ bdLng|Real		| NOT NULL	| 百度(bd09ll)坐标经度
 mtLat|Real		| NOT NULL	| 墨兔坐标纬度
 mtLng|Real		| NOT NULL	| 墨兔坐标经度
 bloorId|Integer| NOT NULL	| 墨兔自定义区域id
+floorId|Integer|NOT NULL	| 楼层id
+blockId|Integer|NOT NULL	| 分区id
 mallId|Integer	| NOT NULL	| 商城id
 
 ### 接口设计
