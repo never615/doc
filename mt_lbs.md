@@ -82,10 +82,11 @@ gpsLng  | Real      | NOT NULL  | 商城坐标gps经度
 gpsLat  | Real      | NOT NULL  | 商城坐标gps纬度
 bdLng   | Real      | NOT NULL  | 商城坐标bd09ll经度
 bdLat   | Real      | NOT NULL  | 商城坐标bd09ll纬度
-lef	  | Real		   | NOT NULL	| 商城范围经度1
-right		| Real		| NOT NULL	| 商城范围经度2
-top		| Real		| NOT NULL	| 商城范围纬度1
-down		| Real 		| NOT NULL	| 商城范围纬度2
+lef	  | Real		   | 	| 商城范围经度1 默认值 -1000
+right		| Real		| 	| 商城范围经度2 默认值 -1000
+top		| Real		| 	| 商城范围纬度1 默认值 -1000
+down		| Real 		| 	| 商城范围纬度2 默认值 -1000
+
 
 #### *【暂不使用】*2. 分区表（Block）
 字段    | 类型      |  约束     |  说明
