@@ -182,9 +182,59 @@ dataVerision|Integer|NOT NULL|商城所对应的数据版本
 ## 开发者使用说明
 ---
 1. 使用室内定位服务前要保证蓝牙开启
-2. 需要android4.3以上和蓝牙4.0
+2. sdk支持到minSdkVersion 9，但是使用定位功能至少需要android4.3以上和蓝牙4.0
 3. 本地没有数据的情况下，云端定位受网络环境影响
 4. 如果无网且本地也没有数据，则无法定位。本地有数据，使用本地数据计算，否则请求云端接口。
+5. 内部使用了百度的定位sdk，所以需要申请秘钥，[点此申请](http://lbsyun.baidu.com/index.php?title=android-locsdk/guide/key)
+
+
+**申请key之后在application标签中加入：**
+
+	<meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="key" />       //key:开发者申请的key
+
+
+
+**声明权限**
+ 
+	<!-- 这个权限用于进行网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<!-- 这个权限用于访问GPS定位-->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<!-- 用于读取手机当前的状态-->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<!-- 访问网络，网络定位需要上网-->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<!-- SD卡读取权限，用户写入离线定位数据-->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<!-- 蓝牙权限，用于获取蓝牙状态 -->
+	<uses-permission android:name="android.permission.BLUETOOTH"/>
+	<!-- 蓝牙权限，用于控制蓝牙开关 -->
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+	<!-- 声明应用需要使用设备的蓝牙BLE -->
+	<uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"/>
+   
+**声明服务**
+
+	在application标签中声明service组件,每个app拥有自己单独的定位service
+	<service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+	<service
+            android:name="com.aprilbrother.aprilbrothersdk.service.BeaconService"
+            android:exported="false"/>
 
 
 ## 开发者需要注意的问题
