@@ -236,6 +236,22 @@ dataVerision|Integer|NOT NULL|商城所对应的数据版本
             android:name="com.aprilbrother.aprilbrothersdk.service.BeaconService"
             android:exported="false"/>
 
+### 使用示例
+    MtLocationManager mtLocationManager = new MtLocationManager
+            .Builder(this)
+            .locationListener(new MtLocationManager.MtLocationListener() {
+                @Override
+                public void notFoundMall() {
+                    Logger.t(TAG).e("not found mall");
+                }
+
+                @Override
+                public void onLocationChange(MtLocation mtLocation) {
+                    Logger.t(TAG).e(mtLocation.toString());
+                }
+            })
+            .build();
+     mtLocationManager.startLocate();       
 
 ## 开发者需要注意的问题
 ---
