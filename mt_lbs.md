@@ -142,6 +142,13 @@ floorId|Integer|NOT NULL	| 楼层id
 blockId|Integer|NOT NULL	| 分区id
 mallId|Integer	| NOT NULL	| 商城id
 
+#### 7. 本地保存信息的表（config）本地表
+字段|类型|约束|说明
+---|---|---|---
+id|Integer|PK|自动增长
+mallId|Integer|NOT NULL|商城id
+dataVerision|Integer|NOT NULL|商城所对应的数据版本
+
 ### 接口设计
 #### 定位api
 1. 初始化MtLocationClient及相关参数的配置
