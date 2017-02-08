@@ -1,3 +1,3 @@
 <script language="javascript">
-    window.location = "http://www.never615.com/mallto-doc/#!开发者使用指南.md";
+    window.location = "http://never615.github.io/mallto-doc/#!开发者使用指南.md";
 </script>
